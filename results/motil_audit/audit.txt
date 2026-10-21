@@ -1,0 +1,14 @@
+{
+  "upstream_commit": "2a8f006d1b72d17e5bc6759e72f19b21f2b5aa64",
+  "python": "3.9.25",
+  "torch": "2.2.2+cpu",
+  "cuda_available": false,
+  "syntax_errors": [
+    {
+      "path": "MotiL_micromolecule/chemprop/train/cross_validate.py",
+      "error": "unexpected indent (<unknown>, line 18)"
+    }
+  ]
+}
+Dataset counts: [('bace', 1513, 1), ('bbbp', 2039, 1), ('clintox', 1478, 2), ('esol', 1128, 1), ('freesolv', 642, 1), ('hiv', 41127, 1), ('lipo', 4200, 1), ('muv', 93087, 17), ('qm7', 6830, 1), ('qm8', 21786, 12), ('qm9', 133885, 3), ('sider', 1427, 27), ('tox21', 7831, 12), ('toxcast', 8597, 617), ('zinc15_250K', 250000, 0)]
+Materials: 3 Source Data worksheets: 12

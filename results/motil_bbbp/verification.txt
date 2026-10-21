@@ -1,0 +1,91 @@
+  0%|          | 0/205 [00:00<?, ?it/s]100%|██████████| 205/205 [00:00<00:00, 4160.63it/s]
+  0%|          | 0/205 [00:00<?, ?it/s]100%|██████████| 205/205 [00:00<00:00, 5653.70it/s]
+  0%|          | 0/205 [00:00<?, ?it/s]100%|██████████| 205/205 [00:00<00:00, 4288.93it/s]
+{
+  "upstream_commit": "2a8f006d1b72d17e5bc6759e72f19b21f2b5aa64",
+  "torch": "2.2.2+cpu",
+  "epochs_per_run": 10,
+  "completed_runs": 3,
+  "mean_roc_auc": 0.971842744383728,
+  "std_roc_auc_ddof0": 0.003727778290905469,
+  "all_runs_identical_splits": true,
+  "runs": [
+    {
+      "run": 0,
+      "actual_split_seed": 2024,
+      "sizes": {
+        "train": 1631,
+        "val": 203,
+        "test": 205
+      },
+      "test_roc_auc": 0.9670992714025501,
+      "best_validation_auc_logged": 0.934599,
+      "best_epoch_zero_based": 1,
+      "split_sha256": {
+        "train": "fbff0be0295222c7e434491e60d5897d2bcf599fd07b2660d9ac36d3338daf1f",
+        "val": "3d7e6489dbad1f6f817b297b7f3de93bc241208e92b5ad591ed535bdf50ce75b",
+        "test": "a921f53388a1fe0501ef04803aff88c05c85d1ae1fa0f192c2ebd91abf346de7"
+      },
+      "cross_split_scaffold_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "initial_checkpoint_compatible_encoder_tensors": 17,
+      "checkpoint_sha256": "c3bf796f0fe276be4e48f0e8296e8f94572039045fbb636970313f2ae56ea32c"
+    },
+    {
+      "run": 1,
+      "actual_split_seed": 2024,
+      "sizes": {
+        "train": 1631,
+        "val": 203,
+        "test": 205
+      },
+      "test_roc_auc": 0.9762067395264116,
+      "best_validation_auc_logged": 0.936428,
+      "best_epoch_zero_based": 4,
+      "split_sha256": {
+        "train": "fbff0be0295222c7e434491e60d5897d2bcf599fd07b2660d9ac36d3338daf1f",
+        "val": "3d7e6489dbad1f6f817b297b7f3de93bc241208e92b5ad591ed535bdf50ce75b",
+        "test": "a921f53388a1fe0501ef04803aff88c05c85d1ae1fa0f192c2ebd91abf346de7"
+      },
+      "cross_split_scaffold_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "initial_checkpoint_compatible_encoder_tensors": 17,
+      "checkpoint_sha256": "d01e8ac367171d2f06ad5be5d472ee5ad12dddc729aa6cad3f6eaa70df267190"
+    },
+    {
+      "run": 2,
+      "actual_split_seed": 2024,
+      "sizes": {
+        "train": 1631,
+        "val": 203,
+        "test": 205
+      },
+      "test_roc_auc": 0.9722222222222221,
+      "best_validation_auc_logged": 0.934177,
+      "best_epoch_zero_based": 3,
+      "split_sha256": {
+        "train": "fbff0be0295222c7e434491e60d5897d2bcf599fd07b2660d9ac36d3338daf1f",
+        "val": "3d7e6489dbad1f6f817b297b7f3de93bc241208e92b5ad591ed535bdf50ce75b",
+        "test": "a921f53388a1fe0501ef04803aff88c05c85d1ae1fa0f192c2ebd91abf346de7"
+      },
+      "cross_split_scaffold_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "initial_checkpoint_compatible_encoder_tensors": 17,
+      "checkpoint_sha256": "99422e41f00b8cec00b13aca7495028dd70ad04f488677c936bc71c831ad86b5"
+    }
+  ],
+  "limitations": [
+    "CPU compatibility environment; not the exact paper environment.",
+    "The upstream launcher uses the same split seed for all runs despite incremented seed labels.",
+    "Uses an author-supplied initial checkpoint; full pretraining is not reproduced."
+  ]
+}

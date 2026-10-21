@@ -1,0 +1,20 @@
+{
+  "description": "User-supplied article, Supplementary Information and Source Data; originals retained outside Git checkout under /workspace/motil-work/materials.",
+  "files": [
+    {
+      "name": "41467_2025_66685_MOESM1_ESM.pdf",
+      "bytes": 12877203,
+      "sha256": "d9edaed838a678700ddcad2825f4f7edcce0b85cce7c7ecf8f442dab2aebcbfa"
+    },
+    {
+      "name": "41467_2025_66685_MOESM4_ESM.xlsx",
+      "bytes": 145377,
+      "sha256": "9b0731aebb96abe771d8f3b4792433aa28f4953bc58d2f0dd0f194456b19e47a"
+    },
+    {
+      "name": "s41467-025-66685-w.pdf",
+      "bytes": 2819809,
+      "sha256": "7a1f12cc203c2a2deaa92a0137f9291892c82d10a0a9a23c15c9a23323b08c84"
+    }
+  ]
+}

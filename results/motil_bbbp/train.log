@@ -1,0 +1,306 @@
+INFO - 10/21/26 13:09:50 - 0:00:00 - ============ Initialized logger ============
+INFO - 10/21/26 13:09:50 - 0:00:00 - activation: ReLU
+                                     atom_messages: False
+                                     batch_size: 16
+                                     bias: False
+                                     checkpoint_dir: None
+                                     checkpoint_path: ./dumped/pre-train/1-model/original_CMPN_0707_0800_12000th_epoch.pkl
+                                     checkpoint_paths: ['./dumped/pre-train/1-model/original_CMPN_0707_0800_12000th_epoch.pkl']
+                                     command: python train.py --data_path './data/bbbp.csv' --exp_id bbbp_cpu --dataset_type classification --epochs 10 --num_runs 3 --no_cuda --batch_size 16 --seed 2024 --init_lr '1e-5' --final_lr '5e-6' --wd '5e-5' --warmup_epochs '0.0' --split_type scaffold_balanced --exp_name finetune --split_sizes '0.8' '0.1' '0.1' --step finetune --save_smiles_splits --dump_path '/workspace/motil-work/runs' --checkpoint_path './dumped/pre-train/1-model/original_CMPN_0707_0800_12000th_epoch.pkl' --exp_id "bbbp_cpu"
+                                     config_path: None
+                                     crossval_index_dir: None
+                                     crossval_index_file: None
+                                     cuda: False
+                                     data_path: ./data/bbbp.csv
+                                     dataset_type: classification
+                                     depth: 3
+                                     dropout: 0.0
+                                     dropout1: 0.3
+                                     dropout2: 0.3
+                                     dump_path: /workspace/motil-work/runs
+                                     encoder_name: CMPNN
+                                     ensemble_size: 1
+                                     epochs: 10
+                                     exp_id: bbbp_cpu
+                                     exp_name: finetune
+                                     features_generator: None
+                                     features_only: False
+                                     features_path: None
+                                     features_scaling: True
+                                     ffn_hidden_size: 300
+                                     ffn_num_layers: 2
+                                     final_lr: 5e-06
+                                     folds_file: None
+                                     gpu: None
+                                     hidden_size: 300
+                                     init_lr: 1e-05
+                                     log_frequency: 10
+                                     max_data_size: None
+                                     max_lr: 0.001
+                                     metric: auc
+                                     minimize_score: False
+                                     multiclass_num_classes: 3
+                                     no_cache: False
+                                     num_lrs: 1
+                                     num_runs: 3
+                                     quiet: False
+                                     save_dir: ./ckpt
+                                     save_smiles_splits: True
+                                     seed: 2024
+                                     separate_test_features_path: None
+                                     separate_test_path: None
+                                     separate_val_features_path: None
+                                     separate_val_path: None
+                                     show_individual_scores: False
+                                     split_sizes: [0.8, 0.1, 0.1]
+                                     split_type: scaffold_balanced
+                                     step: finetune
+                                     temperature: 0.1
+                                     test: False
+                                     test_fold_index: None
+                                     undirected: False
+                                     use_compound_names: False
+                                     use_input_features: None
+                                     val_fold_index: None
+                                     warmup_epochs: 0.0
+                                     wd: 5e-05
+INFO - 10/21/26 13:09:50 - 0:00:00 - ========================
+                                     # Git Version: 2a8f006 #
+                                     ========================
+INFO - 10/21/26 13:09:50 - 0:00:00 - The experiment will be stored in /workspace/motil-work/runs/1021-finetune/bbbp_cpu
+                                     
+INFO - 10/21/26 13:09:50 - 0:00:00 - Running command: python train.py --data_path './data/bbbp.csv' --exp_id bbbp_cpu --dataset_type classification --epochs 10 --num_runs 3 --no_cuda --batch_size 16 --seed 2024 --init_lr '1e-5' --final_lr '5e-6' --wd '5e-5' --warmup_epochs '0.0' --split_type scaffold_balanced --exp_name finetune --split_sizes '0.8' '0.1' '0.1' --step finetune --save_smiles_splits --dump_path '/workspace/motil-work/runs' --checkpoint_path './dumped/pre-train/1-model/original_CMPN_0707_0800_12000th_epoch.pkl'
+
+INFO - 10/21/26 13:09:50 - 0:00:00 - Run 0
+INFO - 10/21/26 13:09:50 - 0:00:00 - Loading data
+INFO - 10/21/26 13:09:51 - 0:00:01 - Number of tasks = 1
+DEBUG - 10/21/26 13:09:51 - 0:00:01 - Splitting data with seed 2024
+DEBUG - 10/21/26 13:09:51 - 0:00:02 - Total scaffolds = 1,025 | train scaffolds = 763 | val scaffolds = 129 | test scaffolds = 133
+DEBUG - 10/21/26 13:09:51 - 0:00:02 - Label averages per scaffold, in decreasing order of scaffold frequency,capped at 10 scaffolds and 20 labels: [(array([0.72992701]), array([137])), (array([0.95238095]), array([21])), (array([1.]), array([1])), (array([0.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1]))]
+DEBUG - 10/21/26 13:09:51 - 0:00:02 - Class sizes
+DEBUG - 10/21/26 13:09:51 - 0:00:02 - p_np 0: 23.49%, 1: 76.51%
+DEBUG - 10/21/26 13:09:52 - 0:00:02 - Total size = 2,039 | train size = 1,631 | val size = 203 | test size = 205
+DEBUG - 10/21/26 13:09:52 - 0:00:02 - Loading model from ./dumped/pre-train/1-model/original_CMPN_0707_0800_12000th_epoch.pkl
+DEBUG - 10/21/26 13:09:52 - 0:00:02 - MoleculeModel(
+                                        (sigmoid): Sigmoid()
+                                        (encoder): CMPN(
+                                          (encoder): CMPNEncoder(
+                                            (act_func): ReLU()
+                                            (W_i_atom): Linear(in_features=133, out_features=300, bias=False)
+                                            (W_i_bond): Linear(in_features=147, out_features=300, bias=False)
+                                            (W_h_atom): Linear(in_features=447, out_features=300, bias=False)
+                                            (W_h_0): Linear(in_features=300, out_features=300, bias=False)
+                                            (W_h_1): Linear(in_features=300, out_features=300, bias=False)
+                                            (W_o): Linear(in_features=600, out_features=300, bias=True)
+                                            (gru): BatchGRU(
+                                              (gru): GRU(300, 300, batch_first=True, bidirectional=True)
+                                            )
+                                            (mlp): Linear(in_features=900, out_features=300, bias=False)
+                                          )
+                                        )
+                                        (ffn): Sequential(
+                                          (0): Dropout(p=0.0, inplace=False)
+                                          (1): Linear(in_features=300, out_features=300, bias=True)
+                                          (2): ReLU()
+                                          (3): Dropout(p=0.0, inplace=False)
+                                          (4): Linear(in_features=300, out_features=300, bias=True)
+                                        )
+                                        (ffn_class): Sequential(
+                                          (0): Dropout(p=0.0, inplace=False)
+                                          (1): Linear(in_features=300, out_features=300, bias=True)
+                                          (2): ReLU()
+                                          (3): Dropout(p=0.0, inplace=False)
+                                          (4): Linear(in_features=300, out_features=1, bias=True)
+                                        )
+                                      )
+DEBUG - 10/21/26 13:09:52 - 0:00:02 - Number of parameters = 2,203,501
+INFO - 10/21/26 13:09:55 - 0:00:05 - Epoch 0
+INFO - 10/21/26 13:10:18 - 0:00:28 - Time per epoch 22.848172400999943
+INFO - 10/21/26 13:10:28 - 0:00:38 - Epoch: 0, auc (train:val:test) = 0.939290, 0.928833, 0.949567
+INFO - 10/21/26 13:10:28 - 0:00:38 - Epoch 1
+INFO - 10/21/26 13:10:52 - 0:01:02 - Time per epoch 23.707838270000025
+INFO - 10/21/26 13:11:03 - 0:01:13 - Epoch: 1, auc (train:val:test) = 0.961055, 0.934599, 0.967099
+INFO - 10/21/26 13:11:03 - 0:01:13 - Epoch 2
+INFO - 10/21/26 13:11:26 - 0:01:36 - Time per epoch 23.293859147000035
+INFO - 10/21/26 13:11:37 - 0:01:47 - Epoch: 2, auc (train:val:test) = 0.972685, 0.926582, 0.970401
+INFO - 10/21/26 13:11:37 - 0:01:47 - Epoch 3
+INFO - 10/21/26 13:12:06 - 0:02:16 - Time per epoch 28.701601581999967
+INFO - 10/21/26 13:12:18 - 0:02:29 - Epoch: 3, auc (train:val:test) = 0.978238, 0.933474, 0.973133
+INFO - 10/21/26 13:12:18 - 0:02:29 - Epoch 4
+INFO - 10/21/26 13:12:45 - 0:02:55 - Time per epoch 26.220920749000015
+INFO - 10/21/26 13:12:58 - 0:03:08 - Epoch: 4, auc (train:val:test) = 0.982290, 0.930380, 0.975979
+INFO - 10/21/26 13:12:58 - 0:03:08 - Epoch 5
+INFO - 10/21/26 13:13:19 - 0:03:29 - Time per epoch 21.58523118300002
+INFO - 10/21/26 13:13:30 - 0:03:40 - Epoch: 5, auc (train:val:test) = 0.985091, 0.931224, 0.977914
+INFO - 10/21/26 13:13:30 - 0:03:40 - Epoch 6
+INFO - 10/21/26 13:13:56 - 0:04:06 - Time per epoch 26.482321172999946
+INFO - 10/21/26 13:14:19 - 0:04:29 - Epoch: 6, auc (train:val:test) = 0.985839, 0.928973, 0.977687
+INFO - 10/21/26 13:14:19 - 0:04:29 - Epoch 7
+INFO - 10/21/26 13:14:44 - 0:04:54 - Time per epoch 25.16350527599991
+INFO - 10/21/26 13:15:06 - 0:05:16 - Epoch: 7, auc (train:val:test) = 0.986602, 0.930239, 0.977687
+INFO - 10/21/26 13:15:06 - 0:05:16 - Epoch 8
+INFO - 10/21/26 13:15:29 - 0:05:39 - Time per epoch 23.443966191999834
+INFO - 10/21/26 13:15:40 - 0:05:50 - Epoch: 8, auc (train:val:test) = 0.987161, 0.930942, 0.977573
+INFO - 10/21/26 13:15:40 - 0:05:50 - Epoch 9
+INFO - 10/21/26 13:16:10 - 0:06:20 - Time per epoch 30.403807257000153
+INFO - 10/21/26 13:16:24 - 0:06:34 - Epoch: 9, auc (train:val:test) = 0.987305, 0.929817, 0.976776
+INFO - 10/21/26 13:16:24 - 0:06:34 - Model 0 best validation auc = 0.934599 on epoch 1
+INFO - 10/21/26 13:16:25 - 0:06:35 - Model 0 test auc = 0.967099
+INFO - 10/21/26 13:16:25 - 0:06:35 - seed 2024 Ensemble test auc = 0.967099
+INFO - 10/21/26 13:16:25 - 0:06:35 - Run 1
+INFO - 10/21/26 13:16:25 - 0:06:35 - Loading data
+INFO - 10/21/26 13:16:25 - 0:06:35 - Number of tasks = 1
+DEBUG - 10/21/26 13:16:25 - 0:06:35 - Splitting data with seed 2024
+DEBUG - 10/21/26 13:16:26 - 0:06:36 - Total scaffolds = 1,025 | train scaffolds = 763 | val scaffolds = 129 | test scaffolds = 133
+DEBUG - 10/21/26 13:16:26 - 0:06:36 - Label averages per scaffold, in decreasing order of scaffold frequency,capped at 10 scaffolds and 20 labels: [(array([0.72992701]), array([137])), (array([0.95238095]), array([21])), (array([1.]), array([1])), (array([0.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1]))]
+DEBUG - 10/21/26 13:16:26 - 0:06:36 - Class sizes
+DEBUG - 10/21/26 13:16:26 - 0:06:36 - p_np 0: 23.49%, 1: 76.51%
+DEBUG - 10/21/26 13:16:26 - 0:06:36 - Total size = 2,039 | train size = 1,631 | val size = 203 | test size = 205
+DEBUG - 10/21/26 13:16:26 - 0:06:36 - Loading model from ./dumped/pre-train/1-model/original_CMPN_0707_0800_12000th_epoch.pkl
+DEBUG - 10/21/26 13:16:26 - 0:06:36 - MoleculeModel(
+                                        (sigmoid): Sigmoid()
+                                        (encoder): CMPN(
+                                          (encoder): CMPNEncoder(
+                                            (act_func): ReLU()
+                                            (W_i_atom): Linear(in_features=133, out_features=300, bias=False)
+                                            (W_i_bond): Linear(in_features=147, out_features=300, bias=False)
+                                            (W_h_atom): Linear(in_features=447, out_features=300, bias=False)
+                                            (W_h_0): Linear(in_features=300, out_features=300, bias=False)
+                                            (W_h_1): Linear(in_features=300, out_features=300, bias=False)
+                                            (W_o): Linear(in_features=600, out_features=300, bias=True)
+                                            (gru): BatchGRU(
+                                              (gru): GRU(300, 300, batch_first=True, bidirectional=True)
+                                            )
+                                            (mlp): Linear(in_features=900, out_features=300, bias=False)
+                                          )
+                                        )
+                                        (ffn): Sequential(
+                                          (0): Dropout(p=0.0, inplace=False)
+                                          (1): Linear(in_features=300, out_features=300, bias=True)
+                                          (2): ReLU()
+                                          (3): Dropout(p=0.0, inplace=False)
+                                          (4): Linear(in_features=300, out_features=300, bias=True)
+                                        )
+                                        (ffn_class): Sequential(
+                                          (0): Dropout(p=0.0, inplace=False)
+                                          (1): Linear(in_features=300, out_features=300, bias=True)
+                                          (2): ReLU()
+                                          (3): Dropout(p=0.0, inplace=False)
+                                          (4): Linear(in_features=300, out_features=1, bias=True)
+                                        )
+                                      )
+DEBUG - 10/21/26 13:16:26 - 0:06:36 - Number of parameters = 2,203,501
+INFO - 10/21/26 13:16:26 - 0:06:36 - Epoch 0
+INFO - 10/21/26 13:16:49 - 0:07:00 - Time per epoch 23.634150238000075
+INFO - 10/21/26 13:17:01 - 0:07:11 - Epoch: 0, auc (train:val:test) = 0.927156, 0.929255, 0.952413
+INFO - 10/21/26 13:17:01 - 0:07:11 - Epoch 1
+INFO - 10/21/26 13:17:24 - 0:07:34 - Time per epoch 22.841923119000057
+INFO - 10/21/26 13:17:38 - 0:07:48 - Epoch: 1, auc (train:val:test) = 0.955284, 0.922644, 0.961862
+INFO - 10/21/26 13:17:38 - 0:07:48 - Epoch 2
+INFO - 10/21/26 13:18:02 - 0:08:13 - Time per epoch 24.86166676599987
+INFO - 10/21/26 13:18:13 - 0:08:23 - Epoch: 2, auc (train:val:test) = 0.968562, 0.933755, 0.970059
+INFO - 10/21/26 13:18:13 - 0:08:23 - Epoch 3
+INFO - 10/21/26 13:18:44 - 0:08:54 - Time per epoch 30.48740877499995
+INFO - 10/21/26 13:18:55 - 0:09:05 - Epoch: 3, auc (train:val:test) = 0.975284, 0.933052, 0.974727
+INFO - 10/21/26 13:18:55 - 0:09:05 - Epoch 4
+INFO - 10/21/26 13:19:14 - 0:09:24 - Time per epoch 18.59261338700003
+INFO - 10/21/26 13:19:25 - 0:09:35 - Epoch: 4, auc (train:val:test) = 0.978693, 0.936428, 0.976207
+INFO - 10/21/26 13:19:25 - 0:09:35 - Epoch 5
+INFO - 10/21/26 13:20:01 - 0:10:11 - Time per epoch 35.788540668999985
+INFO - 10/21/26 13:20:17 - 0:10:27 - Epoch: 5, auc (train:val:test) = 0.982143, 0.936146, 0.977687
+INFO - 10/21/26 13:20:17 - 0:10:27 - Epoch 6
+INFO - 10/21/26 13:20:38 - 0:10:48 - Time per epoch 21.518987816000163
+INFO - 10/21/26 13:20:52 - 0:11:02 - Epoch: 6, auc (train:val:test) = 0.983324, 0.933052, 0.978939
+INFO - 10/21/26 13:20:52 - 0:11:02 - Epoch 7
+INFO - 10/21/26 13:21:30 - 0:11:40 - Time per epoch 37.545102557000064
+INFO - 10/21/26 13:21:47 - 0:11:57 - Epoch: 7, auc (train:val:test) = 0.983895, 0.933193, 0.979622
+INFO - 10/21/26 13:21:47 - 0:11:57 - Epoch 8
+INFO - 10/21/26 13:22:14 - 0:12:25 - Time per epoch 27.74319436399992
+INFO - 10/21/26 13:22:24 - 0:12:34 - Epoch: 8, auc (train:val:test) = 0.984663, 0.932630, 0.979053
+INFO - 10/21/26 13:22:24 - 0:12:34 - Epoch 9
+INFO - 10/21/26 13:22:57 - 0:13:07 - Time per epoch 32.408325113000046
+INFO - 10/21/26 13:23:13 - 0:13:23 - Epoch: 9, auc (train:val:test) = 0.984688, 0.932489, 0.978825
+INFO - 10/21/26 13:23:13 - 0:13:23 - Model 0 best validation auc = 0.936428 on epoch 4
+INFO - 10/21/26 13:23:16 - 0:13:26 - Model 0 test auc = 0.976207
+INFO - 10/21/26 13:23:16 - 0:13:26 - seed 2024 Ensemble test auc = 0.976207
+INFO - 10/21/26 13:23:16 - 0:13:26 - Run 2
+INFO - 10/21/26 13:23:16 - 0:13:26 - Loading data
+INFO - 10/21/26 13:23:16 - 0:13:26 - Number of tasks = 1
+DEBUG - 10/21/26 13:23:16 - 0:13:26 - Splitting data with seed 2024
+DEBUG - 10/21/26 13:23:17 - 0:13:27 - Total scaffolds = 1,025 | train scaffolds = 763 | val scaffolds = 129 | test scaffolds = 133
+DEBUG - 10/21/26 13:23:17 - 0:13:27 - Label averages per scaffold, in decreasing order of scaffold frequency,capped at 10 scaffolds and 20 labels: [(array([0.72992701]), array([137])), (array([0.95238095]), array([21])), (array([1.]), array([1])), (array([0.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1])), (array([1.]), array([1]))]
+DEBUG - 10/21/26 13:23:17 - 0:13:27 - Class sizes
+DEBUG - 10/21/26 13:23:17 - 0:13:27 - p_np 0: 23.49%, 1: 76.51%
+DEBUG - 10/21/26 13:23:17 - 0:13:27 - Total size = 2,039 | train size = 1,631 | val size = 203 | test size = 205
+DEBUG - 10/21/26 13:23:17 - 0:13:27 - Loading model from ./dumped/pre-train/1-model/original_CMPN_0707_0800_12000th_epoch.pkl
+DEBUG - 10/21/26 13:23:17 - 0:13:27 - MoleculeModel(
+                                        (sigmoid): Sigmoid()
+                                        (encoder): CMPN(
+                                          (encoder): CMPNEncoder(
+                                            (act_func): ReLU()
+                                            (W_i_atom): Linear(in_features=133, out_features=300, bias=False)
+                                            (W_i_bond): Linear(in_features=147, out_features=300, bias=False)
+                                            (W_h_atom): Linear(in_features=447, out_features=300, bias=False)
+                                            (W_h_0): Linear(in_features=300, out_features=300, bias=False)
+                                            (W_h_1): Linear(in_features=300, out_features=300, bias=False)
+                                            (W_o): Linear(in_features=600, out_features=300, bias=True)
+                                            (gru): BatchGRU(
+                                              (gru): GRU(300, 300, batch_first=True, bidirectional=True)
+                                            )
+                                            (mlp): Linear(in_features=900, out_features=300, bias=False)
+                                          )
+                                        )
+                                        (ffn): Sequential(
+                                          (0): Dropout(p=0.0, inplace=False)
+                                          (1): Linear(in_features=300, out_features=300, bias=True)
+                                          (2): ReLU()
+                                          (3): Dropout(p=0.0, inplace=False)
+                                          (4): Linear(in_features=300, out_features=300, bias=True)
+                                        )
+                                        (ffn_class): Sequential(
+                                          (0): Dropout(p=0.0, inplace=False)
+                                          (1): Linear(in_features=300, out_features=300, bias=True)
+                                          (2): ReLU()
+                                          (3): Dropout(p=0.0, inplace=False)
+                                          (4): Linear(in_features=300, out_features=1, bias=True)
+                                        )
+                                      )
+DEBUG - 10/21/26 13:23:17 - 0:13:27 - Number of parameters = 2,203,501
+INFO - 10/21/26 13:23:17 - 0:13:27 - Epoch 0
+INFO - 10/21/26 13:23:53 - 0:14:03 - Time per epoch 35.78811757099993
+INFO - 10/21/26 13:24:03 - 0:14:13 - Epoch: 0, auc (train:val:test) = 0.945784, 0.923488, 0.943534
+INFO - 10/21/26 13:24:03 - 0:14:13 - Epoch 1
+INFO - 10/21/26 13:24:31 - 0:14:41 - Time per epoch 28.841380588999982
+INFO - 10/21/26 13:24:43 - 0:14:53 - Epoch: 1, auc (train:val:test) = 0.959426, 0.929536, 0.963001
+INFO - 10/21/26 13:24:43 - 0:14:53 - Epoch 2
+INFO - 10/21/26 13:25:10 - 0:15:20 - Time per epoch 26.698610757000097
+INFO - 10/21/26 13:25:33 - 0:15:43 - Epoch: 2, auc (train:val:test) = 0.971890, 0.930520, 0.970515
+INFO - 10/21/26 13:25:33 - 0:15:43 - Epoch 3
+INFO - 10/21/26 13:26:33 - 0:16:43 - Time per epoch 59.80842826799994
+INFO - 10/21/26 13:26:57 - 0:17:07 - Epoch: 3, auc (train:val:test) = 0.977217, 0.934177, 0.972222
+INFO - 10/21/26 13:26:57 - 0:17:07 - Epoch 4
+INFO - 10/21/26 13:27:27 - 0:17:37 - Time per epoch 29.29112225799986
+INFO - 10/21/26 13:27:39 - 0:17:49 - Epoch: 4, auc (train:val:test) = 0.981747, 0.931786, 0.975182
+INFO - 10/21/26 13:27:39 - 0:17:49 - Epoch 5
+INFO - 10/21/26 13:28:55 - 0:19:05 - Time per epoch 76.11223181100013
+INFO - 10/21/26 13:29:16 - 0:19:26 - Epoch: 5, auc (train:val:test) = 0.984716, 0.925879, 0.977573
+INFO - 10/21/26 13:29:16 - 0:19:26 - Epoch 6
+INFO - 10/21/26 13:29:44 - 0:19:54 - Time per epoch 28.33140503499999
+INFO - 10/21/26 13:29:58 - 0:20:08 - Epoch: 6, auc (train:val:test) = 0.985287, 0.924051, 0.977573
+INFO - 10/21/26 13:29:58 - 0:20:08 - Epoch 7
+INFO - 10/21/26 13:30:21 - 0:20:31 - Time per epoch 23.298548813000025
+INFO - 10/21/26 13:30:39 - 0:20:49 - Epoch: 7, auc (train:val:test) = 0.986126, 0.927286, 0.977573
+INFO - 10/21/26 13:30:39 - 0:20:49 - Epoch 8
+INFO - 10/21/26 13:31:20 - 0:21:30 - Time per epoch 40.80453080799998
+INFO - 10/21/26 13:31:37 - 0:21:47 - Epoch: 8, auc (train:val:test) = 0.986920, 0.927145, 0.977117
+INFO - 10/21/26 13:31:37 - 0:21:47 - Epoch 9
+INFO - 10/21/26 13:32:43 - 0:22:53 - Time per epoch 65.38316786600012
+INFO - 10/21/26 13:32:59 - 0:23:09 - Epoch: 9, auc (train:val:test) = 0.986804, 0.926723, 0.976890
+INFO - 10/21/26 13:32:59 - 0:23:09 - Model 0 best validation auc = 0.934177 on epoch 3
+INFO - 10/21/26 13:33:00 - 0:23:10 - Model 0 test auc = 0.972222
+INFO - 10/21/26 13:33:00 - 0:23:10 - seed 2024 Ensemble test auc = 0.972222
+INFO - 10/21/26 13:33:00 - 0:23:10 - 3-time runs
+INFO - 10/21/26 13:33:00 - 0:23:10 - Seed 2024 ==> test auc = 0.967099
+INFO - 10/21/26 13:33:00 - 0:23:10 - Seed 2025 ==> test auc = 0.976207
+INFO - 10/21/26 13:33:00 - 0:23:10 - Seed 2026 ==> test auc = 0.972222
+INFO - 10/21/26 13:33:00 - 0:23:10 - Overall test auc = 0.971843 +/- 0.003728

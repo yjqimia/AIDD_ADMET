@@ -1,0 +1,81 @@
+,,,,,
+,,,,,
+Supplementary Figure 6,,,,,
+,,,,,
+,ID:1,,,,
+,#Term,Database,ID,Input number,P-Value
+,ubiquitin conjugating enzyme activity,Gene Ontology,GO:0061631,11,7.029413839e-26
+,protein polyubiquitination,Gene Ontology,GO:0000209,13,8.02552787138e-22
+,ubiquitin-protein transferase activity,Gene Ontology,GO:0004842,12,1.79253657646e-20
+,protein K48-linked ubiquitination,Gene Ontology,GO:0070936,9,3.0261659207e-19
+,protein ubiquitination,Gene Ontology,GO:0016567,13,8.85110619036e-19
+,ubiquitin-dependent protein catabolic process,Gene Ontology,GO:0006511,11,2.90386380981e-17
+,ubiquitin protein ligase binding,Gene Ontology,GO:0031625,9,1.34611887448e-12
+,protein K11-linked ubiquitination,Gene Ontology,GO:0070979,5,6.58763794613e-11
+,ATP binding,Gene Ontology,GO:0005524,12,1.18046719507e-10
+,MyD88-independent toll-like receptor signaling pathway,Gene Ontology,GO:0002756,4,2.56933301262e-09
+,,,,,
+,ID:3,,,,
+,#Term,Database,ID,Input number,P-Value
+,protein serine/threonine kinase activity,Gene Ontology,GO:0004674,20,8.56387587905e-28
+,protein phosphorylation,Gene Ontology,GO:0006468,20,9.02477035933e-26
+,protein kinase activity,Gene Ontology,GO:0004672,17,1.32565921101e-25
+,ATP binding,Gene Ontology,GO:0005524,26,1.62476571468e-25
+,peptidyl-serine phosphorylation,Gene Ontology,GO:0018105,11,1.37023196465e-15
+,cyclin-dependent protein serine/threonine kinase activity,Gene Ontology,GO:0004693,6,1.67236617767e-11
+,kinase activity,Gene Ontology,GO:0016301,7,2.42288433611e-10
+,peptidyl-threonine phosphorylation,Gene Ontology,GO:0018107,6,1.72077070716e-09
+,protein tyrosine kinase activity,Gene Ontology,GO:0004713,6,1.13841021537e-08
+,RNA polymerase II CTD heptapeptide repeat kinase activity,Gene Ontology,GO:0008353,4,1.29003268192e-08
+,,,,,
+,ID:5,,,,
+,#Term,Database,ID,Input number,P-Value
+,ATP binding,Gene Ontology,GO:0005524,56,4.68410368226e-52
+,cytosol,Gene Ontology,GO:0005829,52,7.93420900971e-19
+,carbohydrate phosphorylation,Gene Ontology,GO:0046835,10,5.17433220594e-18
+,identical protein binding,Gene Ontology,GO:0042802,29,2.85048198598e-15
+,phosphorylation,Gene Ontology,GO:0016310,12,7.72654633137e-15
+,magnesium ion binding,Gene Ontology,GO:0000287,12,1.61287826704e-11
+,glycolytic process,Gene Ontology,GO:0006096,7,1.67543797321e-10
+,canonical glycolysis,Gene Ontology,GO:0061621,6,2.81584976573e-09
+,potassium ion binding,Gene Ontology,GO:0030955,4,1.90282157154e-07
+,glucose binding,Gene Ontology,GO:0005536,4,3.35975948628e-07
+,,,,,
+,ID:6,,,,
+,#Term,Database,ID,Input number,P-Value
+,tRNA aminoacylation for protein translation,Gene Ontology,GO:0006418,11,6.54314754879e-30
+,tRNA binding,Gene Ontology,GO:0000049,6,7.47062692003e-13
+,ATP binding,Gene Ontology,GO:0005524,10,1.34803373961e-10
+,aminoacyl-tRNA synthetase multienzyme complex,Gene Ontology,GO:0017101,3,6.35281722923e-08
+,tRNA processing,Gene Ontology,GO:0008033,3,8.57792309933e-08
+,protein homodimerization activity,Gene Ontology,GO:0042803,6,9.40686596291e-07
+,mitochondrial matrix,Gene Ontology,GO:0005759,5,1.54868909795e-06
+,translation,Gene Ontology,GO:0006412,4,2.27446903872e-06
+,diadenosine tetraphosphate biosynthetic process,Gene Ontology,GO:0015966,2,3.3976588584e-06
+,aspartate-tRNA ligase activity,Gene Ontology,GO:0004815,2,3.3976588584e-06
+,,,,,
+,ID:9,,,,
+,#Term,Database,ID,Input number,P-Value
+,MAP kinase activity,Gene Ontology,GO:0004707,7,2.56290265963e-18
+,ATP binding,Gene Ontology,GO:0005524,11,1.08423940914e-12
+,peptidyl-serine phosphorylation,Gene Ontology,GO:0018105,7,1.8500216736e-12
+,protein serine/threonine kinase activity,Gene Ontology,GO:0004674,8,3.61690453491e-12
+,intracellular signal transduction,Gene Ontology,GO:0035556,8,5.27299893091e-12
+,regulation of DNA-binding transcription factor activity,Gene Ontology,GO:0051090,5,6.27564153428e-12
+,regulation of gene expression,Gene Ontology,GO:0010468,7,1.54837612706e-11
+,MAP kinase kinase activity,Gene Ontology,GO:0004708,4,7.91442564897e-10
+,stress-activated MAPK cascade,Gene Ontology,GO:0051403,4,3.31067329592e-09
+,activation of MAPK activity,Gene Ontology,GO:0000187,5,6.83013226337e-09
+,,,,,
+,ID:11,,,,
+,#Term,Database,ID,Input number,P-Value
+,"mRNA splicing, via spliceosome",Gene Ontology,GO:0000398,3,2.17956028615e-05
+,RNA binding,Gene Ontology,GO:0003723,4,0.000133064310494
+,catalytic step 2 spliceosome,Gene Ontology,GO:0071013,2,0.000205017756651
+,RNA splicing,Gene Ontology,GO:0008380,2,0.000704312904041
+,deoxynucleoside kinase activity,Gene Ontology,GO:0019136,1,0.00134274514891
+,cytoplasmic translational initiation,Gene Ontology,GO:0002183,1,0.00153444808108
+,"DNA-templated transcription, termination",Gene Ontology,GO:0006353,1,0.00210938024713
+,nucleotide biosynthetic process,Gene Ontology,GO:0009165,1,0.00325845004728
+,RNA cap binding,Gene Ontology,GO:0000339,1,0.00325845004728
+,Prp19 complex,Gene Ontology,GO:0000974,1,0.00344985872531

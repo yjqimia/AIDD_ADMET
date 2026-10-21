@@ -1,0 +1,9 @@
+{
+  "head": "2a8f006d1b72d17e5bc6759e72f19b21f2b5aa64",
+  "tag": "v1.0.0",
+  "tag_commit": "f4f24cffafce22ee0bc41b8be7228ce0c6cb3c1b",
+  "head_micromolecule_tree": "669a447bcf75aa49ab1bc9cfaa950106d102f367",
+  "tag_micromolecule_tree": "669a447bcf75aa49ab1bc9cfaa950106d102f367",
+  "whole_repository_diff_stat": "README.md | 240 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--\n motil.png | Bin 0 -> 1836754 bytes\n 2 files changed, 236 insertions(+), 4 deletions(-)",
+  "zenodo_archive_verified": false
+}

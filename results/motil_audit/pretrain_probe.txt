@@ -1,0 +1,8 @@
+{
+  "scope": "One ethanol molecule through the upstream DDPM loss, CPU diagnostic only",
+  "full_pretraining_executed": false,
+  "status": "failed",
+  "exception_type": "TypeError",
+  "error": "forward() takes 7 positional arguments but 8 were given",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/AIDD_ADMET/scripts/probe_motil_pretrain.py\", line 32, in <module>\n    loss = diffusion.compute_loss(['CCO'], 'pretrain', 'contrast_mol', args.depth, args.dropout1)\n  File \"/workspace/motil-work/MotiL/MotiL_micromolecule/chemprop/train/run_training.py\", line 89, in compute_loss\n    x_0_pred = self.reverse_diffusion(x_t, t, [seq], step, task, deep_num1, dropout1)\n  File \"/workspace/motil-work/MotiL/MotiL_micromolecule/chemprop/train/run_training.py\", line 71, in reverse_diffusion\n    pred_noise = self.mlp(self.gnn(step, False, task, deep_num1, dropout1, batch, None))\n  File \"/workspace/motil-work/venv/lib/python3.9/site-packages/torch/nn/modules/module.py\", line 1511, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/workspace/motil-work/venv/lib/python3.9/site-packages/torch/nn/modules/module.py\", line 1520, in _call_impl\n    return forward_call(*args, **kwargs)\nTypeError: forward() takes 7 positional arguments but 8 were given\n"
+}

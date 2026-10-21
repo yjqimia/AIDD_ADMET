@@ -1,0 +1,9 @@
+Using Python 3.9.25 environment at: /workspace/motil-work/venv
+Checked 1 package in 8ms
+Using Python 3.9.25 environment at: /workspace/motil-work/venv
+Checked 14 packages in 4ms
+Using Python 3.9.25 environment at: /workspace/motil-work/venv
+Checked 1 package in 2ms
+torch 2.2.2+cpu cuda False
+rdkit 2022.09.1 pyg 2.3.0 sklearn 0.24.2 scatter 2.1.2
+Using Python 3.9.25 environment at: /workspace/motil-work/venv
