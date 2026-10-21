@@ -1,0 +1,8 @@
+# Local environments, author checkout, downloads and full model artifacts.
+.local/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example

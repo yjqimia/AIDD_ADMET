@@ -6,6 +6,7 @@
 
 - [文章阅读：只含 Abstract 和 Results](notes/文章阅读.md)
 - [复现记录：环境、每步命令、结果与未完成事项](notes/复现记录.md)
+- [本机 RTX 3080：安装、运行、记录过程并同步 GitHub](notes/本机复现与GitHub同步.md)
 - [材料清单与 SHA256](notes/materials_manifest.json)
 - [材料核查、环境与作者 Source Data 再分析](results/motil_audit)
 
